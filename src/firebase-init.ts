@@ -1,4 +1,4 @@
-declare const firebase: any;
+declare var firebase: any;
 
 var firebaseConfig = {
     apiKey: "AIzaSyAz8HtrKT-UiKutaaOXs1Kwfg2IdNTrovk",
@@ -11,16 +11,3 @@ var firebaseConfig = {
     measurementId: "G-TZWJZYZ157"
 };
 firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-
-console.log("hey there");
-
-db.collection("Test").doc("new").set({
-    "worked": true
-})
-    .then(() => {
-        console.log("worked")
-    })
-    .catch((err: any) => {
-        console.log(err);
-    })

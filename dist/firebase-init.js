@@ -10,14 +10,3 @@ var firebaseConfig = {
     measurementId: "G-TZWJZYZ157"
 };
 firebase.initializeApp(firebaseConfig);
-var db = firebase.firestore();
-console.log("hey there");
-db.collection("Test").doc("new").set({
-    "worked": true
-})
-    .then(function () {
-    console.log("worked");
-})
-    .catch(function (err) {
-    console.log(err);
-});
