@@ -94,3 +94,26 @@ loginBtn.onclick = function () {
     signUp(newUser);
     console.log(newUser);
 };
+var registerNowBtn = document.getElementById("register_now_btn");
+registerNowBtn.onclick = function () {
+    //TODO:
+    // Yousef will add the username and sex fields later
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var username = email;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var sex = 'male';
+    var newUser = {
+        email: email,
+        password: password,
+        username: username,
+        phoneNumber: phoneNumber,
+        firstName: firstName,
+        lastName: lastName,
+        sex: sex
+    };
+    signUp(newUser);
+    console.log(newUser);
+};

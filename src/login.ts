@@ -128,3 +128,32 @@ loginBtn.onclick = () => {
     signUp(newUser);
     console.log(newUser);
 }
+
+let registerNowBtn: any = document.getElementById("register_now_btn");
+
+registerNowBtn.onclick = () => {
+
+    //TODO:
+    // Yousef will add the username and sex fields later
+
+    let email: any = (document.getElementById("email") as HTMLInputElement).value;
+    let password: string = (document.getElementById("password") as HTMLInputElement).value;
+    let username: string = email;
+    let phoneNumber: string = (document.getElementById("phoneNumber") as HTMLInputElement).value;
+    let firstName: string = (document.getElementById("firstName") as HTMLInputElement).value;
+    let lastName: string = (document.getElementById("lastName") as HTMLInputElement).value;
+    let sex: Sex = 'male';
+
+    const newUser: User = {
+        email,
+        password,
+        username,
+        phoneNumber,
+        firstName,
+        lastName,
+        sex
+    }
+
+    signUp(newUser);
+    console.log(newUser);
+}
